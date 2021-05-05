@@ -33,7 +33,7 @@ console.log(copyWithSpread);//copy changed
 
 const arrayOfNumbers = [19, 252, 517, 209, 134, 8, 33, 4, 77];
 
-const LargestNumber = array => Math.max(...arrayOfNumbers);
+const LargestNumber = array => Math.max(...array);
 
 console.log(LargestNumber(arrayOfNumbers));//it prints 517
 
@@ -42,7 +42,7 @@ console.log(LargestNumber(arrayOfNumbers));//it prints 517
 
 const arrayOfNum = [19, 252, 517, 209, 134, 8, 33, 4, 77];
 
-const smallestNumber = array => Math.min(...arrayOfNum);
+const smallestNumber = array => Math.min(...array);
 
 console.log(smallestNumber(arrayOfNum));//it prints 4
 
@@ -69,11 +69,11 @@ console.log(employee);// it prints { name: 'John', role: 'Teacher' }
 
 // * 5.3 Then change the values of the properties in the employee object.
 
-employee.role = "designer";
+employee.job = {role: "designer"};
 employee.name = "Lola";
 
 console.log(person);//it doesnt change again and prints: { name: 'Suzanne' }
-console.log(employee);//it prints { name: 'Lola', job: { role: 'Teacher' }, role: 'designer' }
+console.log(employee);//it prints { name: 'Lola', job: { role: 'designer' }
 
 
 
