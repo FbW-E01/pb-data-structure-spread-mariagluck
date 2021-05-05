@@ -1,30 +1,27 @@
 // ### 1. Combining Arrays 
 // * Create two arrays. e.g. euroCountries and asianCountries. Add asianCountries items to the end of euroCountries array. 
 // * Once again create two arrays. Save all elements of both arrays to another variable. 
-
-const euroCountries = ["Paris", "Madrid", "London", "Berlin"];
 const asianCountries = ["Beijing", "Tokio", "Yakarta", "Seul"];
+const euroCountries = ["Paris", "Madrid", "London", "Berlin", ...asianCountries];
 
 
-euroCountries.push(asianCountries);
 console.log(euroCountries);
-//it prints: 
+// //it prints: 
 // [
-//     'Paris',
-//     'Madrid',
-//     'London',
-//     'Berlin',
-//     [ 'Beijing', 'Tokio', 'Yakarta', 'Seul' ]
+//     'Paris',   'Madrid',
+//     'London',  'Berlin',
+//     'Beijing', 'Tokio',
+//     'Yakarta', 'Seul'
 //   ]
-
 const array1 = ["aa", "bb", "cc"];
 const array2 = ["dd", "ee", "ff"];
-const newArray = [[array1] +  [array2]];
+const newArray = [...array1, ...array2];
 console.log(newArray); //it prints [ 'aa,bb,ccdd,ee,ff' ]
 
 
 // #### 2. Copying Arrays
 // * Copy an array using the spread operator. Store the copied array in another variable. 
+
 const coolArray = ["hola", "hey", "ciao"];
 const copyWithSpread = [...coolArray];
 copyWithSpread.push("hallo");
