@@ -61,7 +61,7 @@ console.log(person);//it has changed : it prints { name: 'Suzanne' }
 console.log(clonedPerson);// it prints { name: 'Suzanne' }
 
 // * 5.2 Merge these two objects into one object: "employee". Use the spread operator to do so. 
-const employee = {...person, job };
+const employee = {...person, ...job };
 
 console.log(employee);// it prints { name: 'John', role: 'Teacher' }
 //console.log(person); it prints { name: 'John' } so has not changed
